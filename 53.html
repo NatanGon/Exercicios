@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="Nota1" placeholder="Número">
+    <input type="text" id="Nota2" placeholder="Número">
+    <input type="text" id="Nota3" placeholder="Número">
+    <input type="text" id="Nota4" placeholder="Número">
+    <button onclick="verificar()">Ok</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        var A = parseFloat(document.querySelector("#Nota1").value);
+        var B = parseFloat(document.querySelector("#Nota2").value);
+        var C = parseFloat(document.querySelector("#Nota3").value);
+        var D = parseFloat(document.querySelector("#Nota4").value);
+
+        var final = ( A + B + C + D )/4;
+
+        if (final >= 5) {
+            document.querySelector("#resultado").innerHTML = "<p>Aprovado</p>";
+        }else{
+            document.querySelector("#resultado").innerHTML = "<p>Reprovado</p>";     
+        }
+    }
+   function resultado(texto, local){
+       document.querySelector(local).innerHTML = texto;
+   }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label>Digite um número</label>
+    <input type="text" id="valor">
+    <button onclick="parImpar()">Ok</button>
+    <div id="saida"></div>
+</body>
+</html>
+<script>
+    function parImpar(){
+        var num = document.querySelector("#valor").value;
+        if (num >= 1 && num <= 9){
+            //console.log("Par");
+            //alert("Par");
+            //document.write("Par");
+            document.querySelector("#saida").innerHTML = "<p> O valor está na faixa permitida </p>";
+        }else{
+           // console.log("Impar");
+           document.querySelector("#saida").innerHTML = "<p> O valor está fora da faixa permitida </p>";
+        }
+    }
+</script>

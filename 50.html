@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label>Digite um número</label>
+    <input type="text" id="nome">
+    <input type="radio" id="Homem Macho" name="sexo" value="M" checked> Homem Macho
+    <input type="radio" id="Bixa" name="sexo" value="F"> Bixinha
+    <button onclick="tratamento()">Ok</button>
+    <div id="saida"></div>
+</body>
+</html>
+<script>
+    function tratamento(){
+        var nome = document.querySelector("#nome").value;
+        var sexo = document.querySelectorAll(".sexo");
+        console.log(sexo);
+        if (sexo[0].checked) {
+        saida("<p>Ilmo Sr. "+ nome +"</p>", "#saida");
+        }else{
+            saida("<p>Ilma Sra. "+ nome +"</p>", "#saida");   
+        }
+    }
+   function saida(texto, local){
+       document.querySelector(local).innerHTML = texto;
+   }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="A1" placeholder="Número">
+    <input type="text" id="B2" placeholder="Número">
+    <button onclick="verificar()">Ok</button>
+    <div id="saida"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        var A = document.querySelector("#A1").value;
+        var B = document.querySelector("#B2").value;
+        if (A > 0) {
+            document.getElementById("A1").value = A;
+        }else{
+            document.getElementById("B2").value = B;     
+        }
+    }
+   function saida(texto, local){
+       document.querySelector(local).innerHTML = texto;
+   }
+</script>

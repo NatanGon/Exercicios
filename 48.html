@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label>Digite um número</label>
+    <input type="text" id="valor">
+    <button onclick="parImpar()">Ok</button>
+    <div id="saida"></div>
+</body>
+</html>
+<script>
+    function parImpar(){
+        var num = document.querySelector("#valor").value;
+        if (num % 2 == 0){
+            //console.log("Par");
+            //alert("Par");
+            //document.write("Par");
+            document.querySelector("#saida").innerHTML = "<p> PAR </p>";
+        }else{
+           // console.log("Impar");
+           document.querySelector("#saida").innerHTML = "<p> IMPAR </p>";
+        }
+    }
+</script>
